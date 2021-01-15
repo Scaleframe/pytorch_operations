@@ -1,5 +1,7 @@
 import torch
 
+# print("hello borld")
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 my_tensor = torch.tensor([[1,2,3], [4,5,6]], dtype=torch.float32, 
@@ -34,6 +36,10 @@ x = torch.diag(torch.ones(3)) # creates these values at diagonal.
 
 # how to init and convert tensors to other types, int, float, double
 tensor = torch.arange(4)
-
-print(tensor.bool())
+print(tensor.bool()) # boolean True/False
+print(tensor.short()) # int16
+print(tensor.long()) # int64 (Important)
+print(tensor.half()) # float16
+print(tensor.float()) # float32 (Important)
+print(tensor.double()) # float64
 
