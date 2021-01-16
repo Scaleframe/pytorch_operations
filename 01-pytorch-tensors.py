@@ -85,4 +85,24 @@ x = z ** 2 # same operation
 
 # comparison
 z = x > 0
-z = x < 8
+z = x < 0
+
+
+# Matrix Multiplication
+x1 = torch.rand((2,5))
+x2 = torch.rand((5,3))
+
+x3 = torch.mm(x1, x2) # mm x1 x x2 -> out shape 2x3
+x3 = x1.mm(x2) # same as line above 
+
+
+# matrix exponentiation
+matrix_exp = torch.rand(5,5)
+print(
+    matrix_exp.matrix_power(3)
+) # same as matrix_exp (mm) matrix exp (mm) matrix_exp
+
+
+
+
+
